@@ -36,7 +36,7 @@ class EvmDisassembler(object):
                     if raise_on_invalid_opcode:
                         raise exceptions.InvalidOpcodeError("invalid instruction: %s" % instruction.name)
                     else:
-                        logger.warning("invalid instruction: %s" % instruction.name)
+                        logger.debug("invalid instruction: %s" % instruction.name)
                     instruction._name = "INVALID_%s" % hex(opcode)
                     instruction._description = "Invalid operand"
                     instruction._category = "unknown"
